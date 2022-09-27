@@ -8,6 +8,8 @@ To create the environmnet variants we 1) fit a base model for each user and 2) i
 
 We fit 3 environment base models (reward generating function under no intervention / action): using the ROBAS 2 data set found [here](https://github.com/ROBAS-UCLA/ROBAS.2/blob/master/inst/extdata/robas_2_data.csv).
 
+The code for fitting the environment base models is in [fitting_environment_base_models.py](https://github.com/StatisticalReinforcementLearningLab/pcs-for-rl/blob/main/code/fitting_environment_base_models.py) and selecting the environment base model best fit for each ROBAS 2 user is in [selecting_environment_base_models.py](https://github.com/StatisticalReinforcementLearningLab/pcs-for-rl/blob/main/code/selecting_environment_base_models.py).
+
 After fitting, the base model parameters and the selected base model for each ROBAS 2 user are saved to csv files in the `sim_env_data` folder.
 Base model parameters follow the naming pattern `{environment_base_model}_params.csv`, and the selected base model for each user is a dictionary saved as a pickle file with the names `stat_user_models.p` and `non_stat_user_models.p`.
 
